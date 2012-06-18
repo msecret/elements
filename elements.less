@@ -92,6 +92,11 @@
   -moz-transform:scale(@ratio);
   transform:scale(@ratio);
 }
+.transition(@duration, @ease: linear) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
 .transition(@property: all, @duration:0.2s, @ease:ease-out, @delay: 0) {
   -webkit-transition: all @duration @ease;
   -moz-transition: all @duration @ease;
