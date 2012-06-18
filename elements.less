@@ -56,6 +56,11 @@
   border-radius: @radius;
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
 }
+.border-radius(@all: 0) {
+  -webkit-border-radius: @all;
+  -moz-border-radius: @all;
+  border-radius: @all;
+}
 .border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
   -webkit-border-top-right-radius: @topright;
   -webkit-border-bottom-right-radius: @bottomright;
@@ -92,7 +97,7 @@
   -moz-transform:scale(@ratio);
   transform:scale(@ratio);
 }
-.transition(@duration:0.2s, @ease:ease-out) {
+.transition(@property: all, @duration:0.2s, @ease:ease-out, @delay: 0) {
   -webkit-transition: all @duration @ease;
   -moz-transition: all @duration @ease;
   transition: all @duration @ease;
