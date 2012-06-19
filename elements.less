@@ -92,15 +92,16 @@
   -moz-transform:scale(@ratio);
   transform:scale(@ratio);
 }
+/*
 .transition(@duration, @ease: linear) {
   -webkit-transition: all @duration @ease;
   -moz-transition: all @duration @ease;
   transition: all @duration @ease;
-}
+} */
 .transition(@property: all, @duration:0.2s, @ease:ease-out, @delay: 0) {
-  -webkit-transition: all @duration @ease;
-  -moz-transition: all @duration @ease;
-  transition: all @duration @ease;
+  -webkit-transition: @property @duration @ease @delay;
+  -moz-transition: @property @duration @ease @delay;
+  transition: @property @duration @ease @delay;
 }
 .inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
   -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
